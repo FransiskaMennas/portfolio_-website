@@ -1,0 +1,341 @@
+/* --- 1. GENERAL SETUP --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fef5f8;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+/* --- 2. NAVIGATION --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 8%;
+    background: #fff;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #fdf2f8;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #f48fb1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.85rem; /* Smaller font for elegance */
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f48fb1;
+}
+
+/* --- 3. HERO SPLIT LAYOUT --- */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+}
+
+/* Left Side - Soft Pink */
+.hero-left {
+    background-color: #fce4ec; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* Right Side - Light Pink */
+.hero-right {
+    background-color: #fff5f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+}
+
+/* --- 4. IMAGES --- */
+.image-container {
+    width: 350px; /* Reduced from 400px */
+    height: 350px;
+}
+
+.profile-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 10px solid white;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    margin: 25px;
+    padding: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* --- 5. TYPOGRAPHY (SCALED DOWN) --- */
+.hero-content h1, .about-text h3, .projects-intro h1, .skills-intro h1, .contact-info h1 {
+    font-size: 2.2rem; /* Reduced for a cleaner look */
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.hero-content h2 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.description, .about-text p {
+    font-size: 0.92rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 480px;
+}
+
+.dotted-spec {
+    border: 3px dotted #f48fb1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* --- 6. BUTTONS --- */
+.hero-btns {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.btn-dark {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.btn-white {
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid #e2e8f0;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- 7. SKILLS & PROJECTS CARDS --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.skill-card, .project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #fce4ec;
+    transition: 0.3s;
+}
+
+.skill-card h3, .project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.skill-card p, .project-card p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* --- 8. CONTACT FORM --- */
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid #fce4ec;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* --- 9. MOBILE RESPONSIVENESS --- */
+@media (max-width: 900px) {
+    .hero-split {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-left, .hero-right {
+        padding: 40px 5%;
+    }
+
+    .image-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul {
+        gap: 10px;
+    }
+    
+    nav ul li a {
+        font-size: 0.75rem;
+    }
+}
+/* Styling to show the full picture on the About page */
+.full-picture {
+    width: 100%;
+    height: auto; /* Allows the height to grow based on the photo's shape */
+    max-height: 500px; /* Prevents the photo from becoming too huge */
+    border-radius: 15px; /* Adds a slight professional rounding to the corners */
+    object-fit: contain; /* Ensures the entire image is visible inside the container */
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Adjusting the container for the full picture */
+.image-container {
+    width: 100%;
+    max-width: 400px; /* Limits the width so it stays elegant */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* --- PROJECTS PAGE (FIGMA STYLE) --- */
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.placeholder-content {
+    max-width: 650px;
+}
+
+.placeholder-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.top-description, .bottom-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+.rocket-circle {
+    width: 110px;
+    height: 110px;
+    background: #fdf2f8; /* Soft pink glow background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    box-shadow: 0 10px 20px rgba(244, 143, 177, 0.1);
+}
+
+.rocket-emoji {
+    font-size: 3rem;
+}
+
+.placeholder-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.status-container {
+    margin-top: 35px;
+}
+
+.status-badge {
+    background: #f1f5f9; /* Light grey/blue background */
+    color: #475569;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.btn-white {
+    background: #fff;
+    color: #1a1a1a;
+    border: 1px solid #f48fb1; /* A pink border to match your theme */
+}
+
+.btn-white:hover {
+    background: #fdf2f8; /* Very light pink background on hover */
+    border-color: #f48fb1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(244, 143, 177, 0.2);
+}
