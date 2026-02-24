@@ -27,11 +27,19 @@ A clean and elegant personal portfolio website showcasing web design and develop
 
 File Structure
 ├── index.html          =Home page
+
 ├── about.html          = About page
+
 ├── skills.html         = Skills page
+
 ├── projects.html       = Projects page
+
 ├── contact.html        =Contact page
+
 ├── style.css           =Main stylesheet
+
 ├── homephoto.jpg       = Profile image for home
+
 ├── aboutphoto.jpg      =Profile image for about
+
 └── Mennas_Fransiska_CV.pdf  :Resume/CV
